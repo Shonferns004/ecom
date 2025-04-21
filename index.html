@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyStore - E-Commerce</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-600">MyStore</h1>
+      <nav class="space-x-6 text-gray-600">
+        <a href="#" class="hover:text-indigo-600">Home</a>
+        <a href="#products" class="hover:text-indigo-600">Products</a>
+        <a href="#categories" class="hover:text-indigo-600">Categories</a>
+        <a href="#testimonials" class="hover:text-indigo-600">Testimonials</a>
+        <a href="#newsletter" class="hover:text-indigo-600">Newsletter</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-indigo-100 py-20 text-center px-4">
+    <h2 class="text-4xl font-bold text-indigo-700 mb-4">Welcome to MyStore</h2>
+    <p class="text-gray-700 text-lg mb-6">Your one-stop shop for everything trendy and useful!</p>
+    <a href="#products" class="bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700">Shop Now</a>
+  </section>
+
+  <!-- Featured Products -->
+  <section id="products" class="py-16 px-6 max-w-7xl mx-auto">
+    <h3 class="text-3xl font-bold text-center text-gray-800 mb-10">Featured Products</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+  
+      <div class="bg-white p-4 rounded shadow">
+        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de01f6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+             class="w-full h-48 object-cover rounded" alt="Smart Watch">
+        <h4 class="mt-4 text-xl font-semibold">Smart Fitness Watch</h4>
+        <p class="text-gray-600">$59.99</p>
+        <button onclick="addToCart('Smart Fitness Watch')" class="mt-3 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Add to Cart</button>
+      </div>
+  
+      <div class="bg-white p-4 rounded shadow">
+        <img src="https://images.unsplash.com/photo-1580894908360-7ac0b1f066f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+             class="w-full h-48 object-cover rounded" alt="Headphones">
+        <h4 class="mt-4 text-xl font-semibold">Noise-Canceling Headphones</h4>
+        <p class="text-gray-600">$89.99</p>
+        <button onclick="addToCart('Headphones')" class="mt-3 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Add to Cart</button>
+      </div>
+  
+      <div class="bg-white p-4 rounded shadow">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+             class="w-full h-48 object-cover rounded" alt="Sneakers">
+        <h4 class="mt-4 text-xl font-semibold">Men's Running Sneakers</h4>
+        <p class="text-gray-600">$69.99</p>
+        <button onclick="addToCart('Running Sneakers')" class="mt-3 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Add to Cart</button>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <!-- Categories -->
+  <section id="categories" class="py-16 bg-white px-6 max-w-7xl mx-auto">
+    <h3 class="text-3xl font-bold text-center text-gray-800 mb-10">Shop by Category</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+  
+      <div class="p-6 bg-indigo-50 rounded hover:shadow">
+        <img src="https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+             class="mx-auto w-20 h-20 object-cover rounded-full" alt="Watches">
+        <h4 class="mt-4 font-semibold text-lg">Watches</h4>
+      </div>
+  
+      <div class="p-6 bg-indigo-50 rounded hover:shadow">
+        <img src="https://unsplash.com/photos/black-and-gray-corded-headphones-7KMhZqylgss"
+             class="mx-auto w-20 h-20 object-cover rounded-full" alt="Headphones">
+        <h4 class="mt-4 font-semibold text-lg">Headphones</h4>
+      </div>
+  
+      <div class="p-6 bg-indigo-50 rounded hover:shadow">
+        <img src="https://images.unsplash.com/photo-1519741491041-0c2f5ad0f708?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+             class="mx-auto w-20 h-20 object-cover rounded-full" alt="Shoes">
+        <h4 class="mt-4 font-semibold text-lg">Shoes</h4>
+      </div>
+  
+      <div class="p-6 bg-indigo-50 rounded hover:shadow">
+        <img src="https://images.unsplash.com/photo-1600185365523-3f1c5bdc4780?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+             class="mx-auto w-20 h-20 object-cover rounded-full" alt="Accessories">
+        <h4 class="mt-4 font-semibold text-lg">Accessories</h4>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-16 px-6 bg-gray-50">
+    <h3 class="text-3xl font-bold text-center text-gray-800 mb-10">What Our Customers Say</h3>
+    <div class="max-w-5xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 gap-8">
+
+      <div class="bg-white p-6 rounded shadow">
+        <p class="text-gray-700 italic">"Amazing quality and fast delivery! I'm super happy with my watch."</p>
+        <p class="mt-4 font-semibold text-indigo-600">— Alex Morgan</p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow">
+        <p class="text-gray-700 italic">"The sneakers are so comfy and stylish. Definitely coming back."</p>
+        <p class="mt-4 font-semibold text-indigo-600">— Priya S.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section id="newsletter" class="py-16 px-6 bg-indigo-600 text-white text-center">
+    <h3 class="text-3xl font-bold mb-4">Stay Updated</h3>
+    <p class="mb-6">Subscribe to get updates on latest deals and product launches.</p>
+    <form class="flex flex-col sm:flex-row justify-center gap-4 max-w-2xl mx-auto">
+      <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded w-full text-gray-800">
+      <button type="submit" class="bg-white text-indigo-600 font-semibold px-6 py-2 rounded hover:bg-gray-200">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-6 text-center text-gray-500 mt-10 shadow-inner">
+    &copy; 2025 MyStore. All rights reserved.
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function addToCart(product) {
+      alert(product + " has been added to your cart!");
+    }
+  </script>
+
+</body>
+</html>
